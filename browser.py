@@ -11,7 +11,6 @@ import requests
 import functools
 import pyqrcode
 import sys
-import math
 
 #downloder
 # class DownloadItem(downloads.AbstractDownloadItem):
