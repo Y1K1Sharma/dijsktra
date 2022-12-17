@@ -9,6 +9,7 @@ from qutebrowser.utils import debug, usertypes, message, log
 import os
 import requests
 import functools
+import pyqrcode
 import sys
 
 #downloder
@@ -268,8 +269,10 @@ class MainWindow(QMainWindow):
 		self.qrBtn = QPushButton()
 		self.qrBtn.setIcon(QIcon("C:/Users/skvit/Desktop/Browser/icons/qr.png"))
 		self.qrBtn.setIconSize(QSize(34,34))
-		self.qrBtn.setStyleSheet("border-radius: 50px")
+		self.qrBtn.setStyleSheet("border-radius: 50px;")
+		self.qrBtn.clicked.connect(self.code)
 		self.navtb.addWidget(self.qrBtn)
+		
 		# creating first tab
 		self.add_new_tab(QUrl('http://www.google.com'), 'Homepage')
 
@@ -402,6 +405,9 @@ class MainWindow(QMainWindow):
 
 		# set the url
 		self.tabs.currentWidget().setUrl(q)
+
+	def code(self):
+		
 
 	# method to update the url
 	def update_urlbar(self, q, browser = None):
