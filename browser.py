@@ -4,12 +4,12 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtPrintSupport import *
-from qutebrowser.browser import downloads
-from qutebrowser.utils import debug, usertypes, message, log
+# from qutebrowser.browser import downloads
+# from qutebrowser.utils import debug, usertypes, message, log
 import os
-import requests
-import functools
-import pyqrcode
+# import requests
+# import functools
+# import pyqrcode
 import sys
 import math
 
